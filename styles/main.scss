@@ -78,10 +78,15 @@ body {
 
         &--promo {
             margin-left: $mobile-padding;
-            padding-right: 2.5rem;
+            padding-right: 2rem;
+            position: relative;
 
-            &:before {
-                background-image: url(../assets/images/play-btn.svg);
+            &::after {
+                content: url(../assets/images/play-icon.svg);
+                height: 12px;
+                width: 12px;
+                position: absolute;
+                right: 16px;
             }
         }
     }
@@ -114,7 +119,11 @@ body {
 
 // As Seen On section
 .seen-on {
-    &__title {
-        
+    display: flex;
+    flex-direction: column;
+    margin: 2rem 0;
+
+    &__logo {
+        margin: 1.5rem auto;
     }
 }

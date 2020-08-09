@@ -181,6 +181,10 @@ body {
 }
 
 .seen-on {
+  padding: 2rem 0;
+}
+
+.seen-on__logo-list {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -188,11 +192,32 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  padding: 2rem 0;
+}
+
+@media (min-width: 768px) {
+  .seen-on__logo-list {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    margin-bottom: 2rem;
+  }
 }
 
 .seen-on__logo {
   margin: 1.5rem auto;
+}
+
+@media (min-width: 768px) {
+  .seen-on__logo {
+    margin: 1.5rem 0;
+  }
 }
 
 .card {
@@ -216,6 +241,48 @@ body {
   overflow: hidden;
 }
 
+@media (min-width: 768px) {
+  .card {
+    padding: 32px 32px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+  }
+}
+
+@media (min-width: 768px) {
+  .card--device {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    max-width: 1236px;
+  }
+}
+
+@media (min-width: 768px) {
+  .card__text {
+    max-width: 600px;
+  }
+}
+
+@media (min-width: 768px) {
+  .card__title--device {
+    text-align: left;
+    margin-top: 2.5rem;
+  }
+}
+
 .card__btn {
   border-radius: 4px;
   outline: none;
@@ -227,6 +294,20 @@ body {
   display: none;
 }
 
+@media (min-width: 768px) {
+  .card__btn {
+    display: block;
+  }
+}
+
+@media (min-width: 768px) {
+  .card__list {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+}
+
 .card__para {
   color: white;
   text-align: center;
@@ -236,12 +317,26 @@ body {
   margin: 1.5rem 1rem;
 }
 
+@media (min-width: 768px) {
+  .card__para--device {
+    text-align: left;
+    margin: 1.5rem 0;
+  }
+}
+
 .card__caption {
   font-weight: 300;
   font-size: 16px;
   line-height: 19px;
   color: white;
   margin: 22px;
+  text-align: center;
+}
+
+@media (min-width: 768px) {
+  .card__caption {
+    margin: 22px 0;
+  }
 }
 
 .card__pic--device {

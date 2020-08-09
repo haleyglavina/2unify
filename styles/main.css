@@ -45,8 +45,13 @@ h2 {
   -webkit-text-fill-color: transparent;
 }
 
-p, a, button {
-  font-family: Arial, sans-serif;
+h3 {
+  font-family: "League Spartan", sans-serif;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 22px;
+  text-align: center;
+  color: white;
 }
 
 body {
@@ -137,8 +142,8 @@ body {
   outline: none;
   border: none;
   padding: 0.4rem 1rem;
-  color: white;
   font-size: 12px;
+  color: white;
 }
 
 .hero__btn--promo {
@@ -183,10 +188,82 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  margin: 2rem 0;
+  padding: 2rem 0;
 }
 
 .seen-on__logo {
   margin: 1.5rem auto;
+}
+
+.card {
+  background: -webkit-gradient(linear, left top, left bottom, from(#EE5D51), to(#932B89));
+  background: linear-gradient(180deg, #EE5D51 0%, #932B89 100%);
+  -webkit-box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.25);
+          box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.25);
+  border-radius: 20px;
+  padding: 16px 8px;
+  margin: 0 32px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  overflow: hidden;
+}
+
+.card__btn {
+  border-radius: 4px;
+  outline: none;
+  border: none;
+  padding: 0.4rem 1rem;
+  font-size: 12px;
+  background-color: white;
+  color: #932B89;
+  display: none;
+}
+
+.card__para {
+  color: white;
+  text-align: center;
+  font-weight: 300;
+  font-size: 12px;
+  line-height: 15px;
+  margin: 1.5rem 1rem;
+}
+
+.card__pic {
+  width: 275px;
+}
+
+.rating {
+  text-align: center;
+  margin: 3rem 32px;
+}
+
+.rating__quote {
+  font-family: "League Spartan";
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 25px;
+  background: -webkit-gradient(linear, left top, left bottom, from(#EE5D51), to(#932B89));
+  background: linear-gradient(180deg, #EE5D51 0%, #932B89 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.rating__name {
+  font-family: "League Spartan";
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 17px;
+  background: -webkit-gradient(linear, left top, left bottom, from(#EE5D51), to(#932B89));
+  background: linear-gradient(180deg, #EE5D51 0%, #932B89 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 /*# sourceMappingURL=main.css.map */

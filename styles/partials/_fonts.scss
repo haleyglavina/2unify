@@ -48,6 +48,11 @@ h2 {
 	-webkit-text-fill-color: transparent;
 }
 
-p, a, button {
-    font-family: $basic-font, sans-serif;
+h3 {
+    font-family: $fancy-font, sans-serif;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 22px;
+    text-align: center;
+    color: white;
 }

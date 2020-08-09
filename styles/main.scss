@@ -1,0 +1,120 @@
+@import 'partials/fonts';
+@import 'partials/variables';
+
+body {
+    margin: 0;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+// Hero
+.hero {
+    background-image: url(../assets/images/guitar-hero.jpg);
+    background-repeat: none;
+    background-size: 250%;
+    height: 533px;
+    background-position: 20% 7%;
+
+    &__content {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        height: 100%;
+        align-items: center;
+    }
+
+    &__socials {
+        position: relative;
+        overflow: hidden;
+        height: 58px;
+        width: 100vw;
+        background-color: rgba(black, 0.74);
+
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+    }
+
+    &__logo {
+        position: absolute;
+        top: -26px;
+        left: calc(50vw - 100px);
+    }
+
+    &__text {
+        text-align: center;
+        padding-bottom: 1.5rem;
+    }
+
+    &__title {
+        width: 265px;
+        margin: 0 auto;
+        padding-bottom: $mini-padding;
+    }
+
+    &__subtitle {
+        display: block;
+        color: white;
+        font-weight: 300;
+        font-size: 14px;
+        width: 212px;
+        margin: 0 auto;
+        padding-bottom: 12px;
+    }
+
+    &__btn {
+        display: inline-block;
+        background: linear-gradient(90deg, #EE5D51 0%, #932B89 100%);
+        box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.25);
+        border-radius: 4px;
+        outline: none;
+        border: none;
+        padding: 0.4rem 1rem;
+
+        color: white;
+        font-size: 12px;
+
+        &--promo {
+            margin-left: $mobile-padding;
+            padding-right: 2.5rem;
+
+            &:before {
+                background-image: url(../assets/images/play-btn.svg);
+            }
+        }
+    }
+}
+
+.emphasis {
+    &--1 {
+        color: #EE5D51;
+        font-weight: 300;
+        font-size: 14px;
+    }
+
+    &--2 {
+        color: #932B89;
+        font-weight: 300;
+        font-size: 14px;
+    }
+}
+
+// Socials bar (faux nav)
+.socials {
+    &__line {
+        display: block;
+        width: 22px;
+        height: 1px;
+        background-color: rgba(#FFFFFF, 0.6);
+        margin: 5px $mobile-padding 5px 0;
+    }
+}
+
+// As Seen On section
+.seen-on {
+    &__title {
+        
+    }
+}

@@ -14,9 +14,9 @@ body {
 .hero {
     background-image: url(../assets/images/guitar-hero.jpg);
     background-repeat: none;
-    background-size: 250%;
+    background-size: cover;
     height: 533px;
-    background-position: 20% 7%;
+    background-position: 20% 0%;
 
     &__content {
         display: flex;
@@ -130,7 +130,7 @@ body {
     box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.25);
     border-radius: 20px;
     padding: $mobile-padding $mini-padding;
-    margin: 0 $medium-padding;
+    margin: 0 $medium-padding 2rem $medium-padding;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -160,16 +160,25 @@ body {
         margin: 1.5rem 1rem;
     }
 
-    &__pic {
-        width: 275px;
+    &__caption {
+        font-weight: 300;
+        font-size: 16px;
+        line-height: 19px;
+        color: white;
+        margin: 22px;
+    }
 
+    &__pic {
+        &--device {
+            width: 275px;
+        }
     }
 }
 
 // Rating
 .rating {
     text-align: center;
-    margin: 3rem $medium-padding;
+    margin: 4rem $medium-padding;
 
     &__quote {
         font-family: $fancy-font;
@@ -193,3 +202,92 @@ body {
 }
 
 // Features
+.features {
+    &__title {
+        margin-bottom: $medium-padding;
+    }
+}
+
+// Highlights
+.hilights {
+    margin: 0 $medium-padding 2rem $medium-padding;
+
+    &__title {
+        margin-top: 4rem;
+        margin: 4rem 0 2rem 0;
+    }
+
+    &__topic {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 5rem 0;
+
+        &--first {
+            margin-top: 2rem;
+        }
+    }
+
+    &__subtitle {
+        &--top {
+            margin-top: 0;
+        }
+    }
+
+    &__para {
+        font-weight: 300;
+        font-size: 14px;
+        line-height: 17px;
+        text-align: center;
+        margin-top: 0;
+    }
+
+    &__img {
+        border-radius: 4px;
+
+        &--top {
+            margin-top: 14px;
+        }
+    }
+}
+
+// Footer
+.foot {
+    background-color: #252525;
+    width: 100%;
+    padding: $mini-padding $medium-padding;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    &__info {
+        margin: 3.2rem 0 1.5rem 0;
+        color: white;
+        text-align: center;
+        font-weight: 300;
+        font-size: 12px;
+    }
+
+    &__socials {
+        display: flex;
+        width: 125px;
+        justify-content: space-between;
+        margin-bottom: 1.5rem;
+    }
+
+    &__line {
+        width: 100%;
+        margin: 0 $medium-padding 0.5rem $medium-padding;
+        height: 1px;
+        background-color: rgba(255, 255, 255, 0.25);
+    }
+
+    &__detail {
+        margin: 0 0 1.5rem 0;
+        color: white;
+        text-align: center;
+        font-weight: 300;
+        font-size: 10px;
+    }
+}

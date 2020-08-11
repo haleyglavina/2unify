@@ -1,19 +1,27 @@
-// Drop-down socials menu on moblie view
+// Adjust socials dropdown menu visibility for mobile view
 const dropdown = document.querySelector('.socials__dropdown');
 const socialIcons = document.querySelector('.socials__icons');
-
 let socialsDisplayed = false;
 
+// Show/hide dropdown from clicking on dropdown icon
 dropdown.addEventListener('click', e => {
     if (socialsDisplayed) {
-        // hide socials dropdown
+        console.log("Hide from click dropdown");
         socialsDisplayed = false;
         socialIcons.style.display = "none";
 
     } else {
-        // show socials dropdown
+        console.log("show!");
         socialsDisplayed = true;
         socialIcons.style.display = "block";
+    }
+});
+
+// Hide dropdown from clicking anywhere off dropdown
+document.querySelector('body').addEventListener('click', e => {
+    if (!e.target.closest('.socials__dropdown')) {
+        socialIcons.style.display = "none";
+        socialsDisplayed = false;
     }
 });
 
@@ -34,3 +42,5 @@ const colouredHover = (iconElements, iconName) => {
 colouredHover(insta, 'instagram');
 colouredHover(fb, 'facebook');
 colouredHover(linkedin, 'linkedin');
+
+console.log("hi");

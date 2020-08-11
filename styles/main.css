@@ -21,7 +21,7 @@
 
 *, *:before, *:after {
   font-size: 16px;
-  font-family: Arial, sans-serif;
+  font-family: "Proxima Nova", sans-serif;
   font-style: normal;
 }
 
@@ -52,6 +52,10 @@ h3 {
   line-height: 22px;
   text-align: center;
   color: white;
+}
+
+a {
+  text-decoration: none;
 }
 
 body {
@@ -90,10 +94,10 @@ body {
 
 .hero__socials {
   position: relative;
-  overflow: hidden;
   height: 58px;
   width: 100vw;
   background-color: rgba(0, 0, 0, 0.74);
+  overflow: visible;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -146,6 +150,11 @@ body {
   color: white;
 }
 
+.hero__btn:hover {
+  background: #932B89;
+  cursor: pointer;
+}
+
 .hero__btn--promo {
   margin-left: 16px;
   padding-right: 2rem;
@@ -172,12 +181,36 @@ body {
   font-size: 14px;
 }
 
+.socials__dropdown {
+  position: relative;
+}
+
+.socials__dropdown:hover {
+  cursor: pointer;
+}
+
 .socials__line {
   display: block;
   width: 22px;
   height: 1px;
   background-color: rgba(255, 255, 255, 0.6);
-  margin: 5px 16px 5px 0;
+  margin: 5px 18px 5px 0;
+}
+
+.socials__icons {
+  position: absolute;
+  display: none;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  background-color: rgba(0, 0, 0, 0.74);
+  left: -17px;
+  top: 40px;
+}
+
+.socials__icon {
+  padding: 8px 16px;
 }
 
 .seen-on {

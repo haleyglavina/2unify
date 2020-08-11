@@ -28,11 +28,10 @@ body {
 
     &__socials {
         position: relative;
-        overflow: hidden;
         height: 58px;
         width: 100vw;
         background-color: rgba(black, 0.74);
-
+        overflow: visible;
         display: flex;
         justify-content: flex-end;
         align-items: center;
@@ -72,6 +71,11 @@ body {
         @include btn;
         color: white;
 
+        &:hover {
+            background: $main-color-2;
+            cursor: pointer;
+        }
+
         &--promo {
             margin-left: $mobile-padding;
             padding-right: 2rem;
@@ -104,12 +108,35 @@ body {
 
 // Socials bar (faux nav)
 .socials {
+
+    &__dropdown {
+        position: relative;
+
+        &:hover {
+            cursor: pointer;
+        }
+    }
+
     &__line {
         display: block;
         width: 22px;
         height: 1px;
         background-color: rgba(#FFFFFF, 0.6);
-        margin: 5px $mobile-padding 5px 0;
+        margin: 5px 18px 5px 0;
+    }
+
+    &__icons {
+        position: absolute;
+        display: none;
+        flex-direction: column;
+        background-color: rgba(black, 0.74);
+        left: -17px;
+        top: 40px;
+    }
+
+    &__icon {
+        padding: 8px 16px;
+        
     }
 }
 

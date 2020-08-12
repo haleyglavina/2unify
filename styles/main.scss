@@ -24,6 +24,10 @@ body {
         justify-content: space-between;
         height: 100%;
         align-items: center;
+
+        @include tablet {
+            padding-top: 2rem;
+        }
     }
 
     &__socials {
@@ -35,23 +39,46 @@ body {
         display: flex;
         justify-content: flex-end;
         align-items: center;
+
+        @include tablet {
+            background-color: rgba(black, 0);
+        }
     }
 
     &__logo {
         position: absolute;
         top: -26px;
         left: calc(50vw - 100px);
+
+        @include tablet {
+            top: -50px;
+            left: -48px;
+            width: 300px;
+        }
     }
 
     &__text {
         text-align: center;
         padding-bottom: 1.5rem;
+
+        @include tablet {
+            height: 100%;
+            text-align: left;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            margin-left: 50vw;
+        }
     }
 
     &__title {
         width: 265px;
         margin: 0 auto;
         padding-bottom: $mini-padding;
+
+        @include tablet {
+            width: 330px;
+        }
     }
 
     &__subtitle {
@@ -62,6 +89,12 @@ body {
         width: 212px;
         margin: 0 auto;
         padding-bottom: 12px;
+
+        @include tablet {
+            margin: 1rem 0;
+            width: 250px;
+            font-size: 18px;
+        }
     }
 
     &__btn {
@@ -90,6 +123,12 @@ body {
             }
         }
     }
+
+    &__buttons {
+        @include tablet {
+            margin-bottom: 4rem;
+        }
+    }
 }
 
 .emphasis {
@@ -97,20 +136,31 @@ body {
         color: $main-color-1;
         font-weight: 300;
         font-size: 14px;
+
+        @include tablet {
+            font-size: 18px;
+        }
     }
 
     &--2 {
         color: $main-color-2;
         font-weight: 300;
         font-size: 14px;
+
+        @include tablet {
+            font-size: 18px;
+        }
     }
 }
 
 // Socials bar (faux nav)
 .socials {
-
     &__dropdown {
         position: relative;
+
+        @include tablet {
+            display: none;
+        }
 
         &:hover {
             cursor: pointer;
@@ -136,7 +186,15 @@ body {
 
     &__icon {
         padding: 8px 16px;
-        
+    }
+
+    &__bar {
+        display: none;
+        margin: 0 2rem 0 0;
+
+        @include tablet {
+            display: inline-block;
+        }
     }
 }
 
@@ -212,6 +270,10 @@ body {
         background-color: white;
         color: $main-color-2;
         display: none;
+
+        &:hover {
+            opacity: 0.6;
+        }
 
         @include tablet {
             display: block;

@@ -6,12 +6,10 @@ let socialsDisplayed = false;
 // Show/hide dropdown from clicking on dropdown icon
 dropdown.addEventListener('click', e => {
     if (socialsDisplayed) {
-        console.log("Hide from click dropdown");
         socialsDisplayed = false;
         socialIcons.style.display = "none";
 
     } else {
-        console.log("show!");
         socialsDisplayed = true;
         socialIcons.style.display = "block";
     }
@@ -42,5 +40,3 @@ const colouredHover = (iconElements, iconName) => {
 colouredHover(insta, 'instagram');
 colouredHover(fb, 'facebook');
 colouredHover(linkedin, 'linkedin');
-
-console.log("hi");

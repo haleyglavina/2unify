@@ -405,7 +405,7 @@ main {
     }
 
     &__quote {
-        font-family: $fancy-font;
+        font-family: $fancy-font, sans-serif;
         font-weight: bold;
         font-size: 16px;
         line-height: 25px;
@@ -420,7 +420,7 @@ main {
     }
 
     &__name {
-        font-family: $fancy-font;
+        font-family: $fancy-font, sans-serif;
         font-weight: bold;
         font-size: 14px;
         line-height: 17px;

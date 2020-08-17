@@ -31,9 +31,9 @@ const linkedin = document.querySelectorAll('.socials__linkedin');
 const colouredHover = (iconElements, iconName) => {
     iconElements.forEach(icon => {
         icon.addEventListener('mouseover', e => {
-            e.target.src = `../assets/images/${iconName}-hover.svg`;});
+            e.target.src = `./assets/images/${iconName}-hover.svg`;});
         icon.addEventListener('mouseout', e => {
-            e.target.src = `../assets/images/${iconName}.svg`;});
+            e.target.src = `./assets/images/${iconName}.svg`;});
     });
 }
 

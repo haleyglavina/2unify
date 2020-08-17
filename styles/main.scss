@@ -2,12 +2,17 @@
 @import 'partials/variables';
 @import 'partials/mixins';
 
-body {
+body, html {
     margin: 0;
 }
 
 * {
     box-sizing: border-box;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
 }
 
 // Hero
@@ -17,6 +22,10 @@ body {
     background-size: cover;
     height: 533px;
     background-position: 20% 0%;
+
+    @include tablet {
+        height: 75vw;
+    }
 
     &__content {
         display: flex;
@@ -79,6 +88,12 @@ body {
         @include tablet {
             width: 330px;
         }
+
+        @include desktop {
+            font-size: 56px;
+            line-height: 70px;
+            width: 620px;
+        }
     }
 
     &__subtitle {
@@ -94,6 +109,13 @@ body {
             margin: 1rem 0;
             width: 250px;
             font-size: 18px;
+        }
+
+        @include desktop {
+            width: 420px;
+            font-weight: 300;
+            font-size: 24px;
+            line-height: 29px;
         }
     }
 
@@ -120,6 +142,12 @@ body {
                 width: 12px;
                 position: absolute;
                 right: 16px;
+
+                @include desktop {
+                    height: 20px;
+                    width: 20px;
+                    right: 10px;
+                }
             }
         }
     }
@@ -140,6 +168,12 @@ body {
         @include tablet {
             font-size: 18px;
         }
+
+        @include desktop {
+            font-weight: 300;
+            font-size: 24px;
+            line-height: 29px;
+        }
     }
 
     &--2 {
@@ -149,6 +183,12 @@ body {
 
         @include tablet {
             font-size: 18px;
+        }
+
+        @include desktop {
+            font-weight: 300;
+            font-size: 24px;
+            line-height: 29px;
         }
     }
 }
@@ -234,6 +274,7 @@ body {
     flex-direction: column;
     align-items: center;
     overflow: hidden;
+    align-self: center;
 
     @include tablet {
         padding: $medium-padding $medium-padding;
@@ -242,11 +283,19 @@ body {
         justify-content: space-evenly;
     }
 
+    &--features {
+        @include tablet {
+            width: 340px;
+            height: 369px;
+            
+        }
+    }
+
     &--device {
         @include tablet {
             flex-direction: row;
             align-items: flex-start;
-            max-width: 1236px;
+            max-width: 1200px;
         }
     }
 
@@ -272,7 +321,9 @@ body {
         display: none;
 
         &:hover {
-            opacity: 0.6;
+            background-color: #fc7670;
+            color: white;
+            cursor: pointer;
         }
 
         @include tablet {
@@ -293,6 +344,16 @@ body {
         font-size: 12px;
         line-height: 15px;
         margin: 1.5rem 1rem;
+
+        @include tablet {
+            font-size: 16px;
+            line-height: 20px;
+        }
+
+        @include desktop {
+            font-size: 18px;
+            line-height: 22px;
+        }
 
         &--device {
             @include tablet {
@@ -316,11 +377,16 @@ body {
     }
 
     &__pic {
+
+        &--small {
+            padding: 16px;
+        }
+
         &--device {
-            width: 275px;
+            width: 100px;
 
             @include tablet {
-                
+                width: 150px;
             }
         }
     }
@@ -330,6 +396,12 @@ body {
 .rating {
     text-align: center;
     margin: 4rem $medium-padding;
+    max-width: 1004px;
+    align-self: center;
+
+    @include desktop {
+        margin: 5rem 0;
+    }
 
     &__quote {
         font-family: $fancy-font;
@@ -338,7 +410,12 @@ body {
         line-height: 25px;
         background: linear-gradient(180deg, #EE5D51 0%, #932B89 100%);
 	    -webkit-background-clip: text;
-	    -webkit-text-fill-color: transparent;
+        -webkit-text-fill-color: transparent;
+        
+        @include desktop {
+            font-size: 26px;
+            line-height: 40px;
+        }
     }
 
     &__name {
@@ -348,12 +425,20 @@ body {
         line-height: 17px;
         background: linear-gradient(180deg, #EE5D51 0%, #932B89 100%);
 	    -webkit-background-clip: text;
-	    -webkit-text-fill-color: transparent;
+        -webkit-text-fill-color: transparent;
+        
+        @include desktop {
+            font-size: 20px;
+            line-height: 30px;
+            text-align: right;
+        }
     }
 }
 
 // Features
 .features {
+    align-self: center;
+    max-width: $max-content-width;
     &__title {
         margin-bottom: $medium-padding;
     }
@@ -377,6 +462,11 @@ body {
         &--first {
             margin-top: 2rem;
         }
+
+        @include desktop {
+            display: flex;
+            flex-direction: row;
+        }
     }
 
     &__subtitle {
@@ -396,8 +486,30 @@ body {
     &__img {
         border-radius: 4px;
 
+        @include desktop {
+            width: 400px;
+        }
+
         &--top {
+            @include desktop {
+                margin-left: 80px;
+            }
+        }
+
+        &--mid {
             margin-top: 14px;
+
+            @include desktop {
+                margin: 0 80px 0 0;
+            }
+        }
+
+        &--bottom {
+            margin-top: 14px;
+
+            @include desktop {
+                margin: 0 0 0 80px;
+            }
         }
     }
 }

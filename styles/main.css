@@ -51,6 +51,13 @@ h2 {
   -webkit-text-fill-color: transparent;
 }
 
+@media (min-width: 768px) {
+  h2 {
+    font-size: 24px;
+    line-height: 30px;
+  }
+}
+
 h3 {
   font-family: "League Spartan", sans-serif;
   font-weight: bold;
@@ -60,11 +67,18 @@ h3 {
   color: white;
 }
 
+@media (min-width: 768px) {
+  h3 {
+    font-size: 24px;
+    line-height: 30px;
+  }
+}
+
 a {
   text-decoration: none;
 }
 
-body {
+body, html {
   margin: 0;
 }
 
@@ -73,12 +87,28 @@ body {
           box-sizing: border-box;
 }
 
+main {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
 .hero {
   background-image: url(../assets/images/guitar-hero.jpg);
   background-repeat: none;
   background-size: cover;
   height: 533px;
   background-position: 20% 0%;
+}
+
+@media (min-width: 768px) {
+  .hero {
+    height: 75vw;
+  }
 }
 
 .hero__content {
@@ -176,6 +206,14 @@ body {
   }
 }
 
+@media (min-width: 1200px) {
+  .hero__title {
+    font-size: 56px;
+    line-height: 70px;
+    width: 620px;
+  }
+}
+
 .hero__subtitle {
   display: block;
   color: white;
@@ -194,6 +232,15 @@ body {
   }
 }
 
+@media (min-width: 1200px) {
+  .hero__subtitle {
+    width: 420px;
+    font-weight: 300;
+    font-size: 24px;
+    line-height: 29px;
+  }
+}
+
 .hero__btn {
   display: inline-block;
   background: -webkit-gradient(linear, left top, right top, from(#EE5D51), to(#932B89));
@@ -206,6 +253,13 @@ body {
   padding: 0.4rem 1rem;
   font-size: 12px;
   color: white;
+}
+
+@media (min-width: 1200px) {
+  .hero__btn {
+    font-size: 18px;
+    line-height: 22px;
+  }
 }
 
 .hero__btn:hover {
@@ -227,6 +281,14 @@ body {
   right: 16px;
 }
 
+@media (min-width: 1200px) {
+  .hero__btn--promo::after {
+    height: 20px;
+    width: 20px;
+    right: 10px;
+  }
+}
+
 @media (min-width: 768px) {
   .hero__buttons {
     margin-bottom: 4rem;
@@ -245,6 +307,14 @@ body {
   }
 }
 
+@media (min-width: 1200px) {
+  .emphasis--1 {
+    font-weight: 300;
+    font-size: 24px;
+    line-height: 29px;
+  }
+}
+
 .emphasis--2 {
   color: #932B89;
   font-weight: 300;
@@ -254,6 +324,14 @@ body {
 @media (min-width: 768px) {
   .emphasis--2 {
     font-size: 18px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .emphasis--2 {
+    font-weight: 300;
+    font-size: 24px;
+    line-height: 29px;
   }
 }
 
@@ -365,6 +443,8 @@ body {
       -ms-flex-align: center;
           align-items: center;
   overflow: hidden;
+  -ms-flex-item-align: center;
+      align-self: center;
 }
 
 @media (min-width: 768px) {
@@ -384,6 +464,13 @@ body {
 }
 
 @media (min-width: 768px) {
+  .card--features {
+    width: 340px;
+    height: 369px;
+  }
+}
+
+@media (min-width: 768px) {
   .card--device {
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
@@ -392,7 +479,7 @@ body {
     -webkit-box-align: start;
         -ms-flex-align: start;
             align-items: flex-start;
-    max-width: 1236px;
+    max-width: 1200px;
   }
 }
 
@@ -420,8 +507,17 @@ body {
   display: none;
 }
 
+@media (min-width: 1200px) {
+  .card__btn {
+    font-size: 18px;
+    line-height: 22px;
+  }
+}
+
 .card__btn:hover {
-  opacity: 0.6;
+  background-color: #fc7670;
+  color: white;
+  cursor: pointer;
 }
 
 @media (min-width: 768px) {
@@ -448,6 +544,20 @@ body {
 }
 
 @media (min-width: 768px) {
+  .card__para {
+    font-size: 16px;
+    line-height: 20px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .card__para {
+    font-size: 18px;
+    line-height: 22px;
+  }
+}
+
+@media (min-width: 768px) {
   .card__para--device {
     text-align: left;
     margin: 1.5rem 0;
@@ -469,13 +579,33 @@ body {
   }
 }
 
+.card__pic--small {
+  padding: 16px;
+}
+
 .card__pic--device {
-  width: 275px;
+  width: 100px;
+}
+
+@media (min-width: 768px) {
+  .card__pic--device {
+    width: 150px;
+  }
 }
 
 .rating {
   text-align: center;
   margin: 4rem 32px;
+  max-width: 1004px;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+}
+
+@media (min-width: 1200px) {
+  .rating {
+    margin: 5rem 0;
+  }
 }
 
 .rating__quote {
@@ -489,6 +619,13 @@ body {
   -webkit-text-fill-color: transparent;
 }
 
+@media (min-width: 1200px) {
+  .rating__quote {
+    font-size: 26px;
+    line-height: 40px;
+  }
+}
+
 .rating__name {
   font-family: "League Spartan";
   font-weight: bold;
@@ -498,6 +635,21 @@ body {
   background: linear-gradient(180deg, #EE5D51 0%, #932B89 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+}
+
+@media (min-width: 1200px) {
+  .rating__name {
+    font-size: 20px;
+    line-height: 30px;
+    text-align: right;
+  }
+}
+
+.features {
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  max-width: 950px;
 }
 
 .features__title {
@@ -531,6 +683,18 @@ body {
   margin-top: 2rem;
 }
 
+@media (min-width: 1200px) {
+  .hilights__topic {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+}
+
 .hilights__subtitle--top {
   margin-top: 0;
 }
@@ -547,8 +711,36 @@ body {
   border-radius: 4px;
 }
 
-.hilights__img--top {
+@media (min-width: 1200px) {
+  .hilights__img {
+    width: 400px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .hilights__img--top {
+    margin-left: 80px;
+  }
+}
+
+.hilights__img--mid {
   margin-top: 14px;
+}
+
+@media (min-width: 1200px) {
+  .hilights__img--mid {
+    margin: 0 80px 0 0;
+  }
+}
+
+.hilights__img--bottom {
+  margin-top: 14px;
+}
+
+@media (min-width: 1200px) {
+  .hilights__img--bottom {
+    margin: 0 0 0 80px;
+  }
 }
 
 .foot {

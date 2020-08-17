@@ -30,4 +30,9 @@
     border: none;
     padding: 0.4rem 1rem;
     font-size: 12px;
+
+    @include desktop {
+        font-size: 18px;
+        line-height: 22px;
+    }
 }

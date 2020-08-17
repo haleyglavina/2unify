@@ -24,7 +24,8 @@ main {
     background-position: 20% 0%;
 
     @include tablet {
-        height: 75vw;
+        height: 100vh;
+        background-position: 32% 0%;
     }
 
     &__content {
@@ -90,9 +91,9 @@ main {
         }
 
         @include desktop {
-            font-size: 56px;
+            font-size: 54px;
             line-height: 70px;
-            width: 620px;
+            width: 600px;
         }
     }
 
@@ -284,7 +285,7 @@ main {
     }
 
     &--features {
-        @include tablet {
+        @include desktop {
             width: 340px;
             height: 369px;
             
@@ -442,11 +443,20 @@ main {
     &__title {
         margin-bottom: $medium-padding;
     }
+
+    @include desktop {
+        margin-bottom: 3rem;
+    }
 }
 
 // Highlights
 .hilights {
     margin: 0 $medium-padding 2rem $medium-padding;
+
+    @include desktop {
+        width: $max-content-width;
+        margin: auto;
+    }
 
     &__title {
         margin-top: 4rem;
@@ -466,12 +476,31 @@ main {
         @include desktop {
             display: flex;
             flex-direction: row;
+            justify-content: space-between;
+            margin-bottom: 10rem;
+        }
+    }
+
+    &__text {
+        @include desktop {
+            width: 500px;
         }
     }
 
     &__subtitle {
         &--top {
             margin-top: 0;
+        }
+
+        &:hover {
+            opacity: 0.6;
+            cursor: pointer;
+        }
+
+        @include desktop {
+            text-align: left;
+            font-size: 24px;
+            line-height: 30px;
         }
     }
 
@@ -481,6 +510,12 @@ main {
         line-height: 17px;
         text-align: center;
         margin-top: 0;
+
+        @include desktop {
+            text-align: left;
+            font-size: 18px;
+            line-height: 22px;
+        }
     }
 
     &__img {
@@ -524,12 +559,37 @@ main {
     flex-direction: column;
     align-items: center;
 
+    &__orientation {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        @include desktop {
+            flex-direction: row;
+            justify-content: space-between;
+            width: 100%;
+            margin-bottom: 3rem;
+        }
+    }
+
     &__info {
         margin: 3.2rem 0 1.5rem 0;
         color: white;
         text-align: center;
         font-weight: 300;
         font-size: 12px;
+
+        @include tablet {
+            margin: 4rem 0 1.5rem 0;
+        }
+
+        @include desktop {
+            margin: 3.5rem 0 1.5rem 0;
+            font-size: 14px;
+            line-height: 20px;
+            width: 530px;
+            text-align: left;
+        }
     }
 
     &__socials {
@@ -546,11 +606,22 @@ main {
         background-color: rgba(255, 255, 255, 0.25);
     }
 
+    &__deets {
+        @include desktop {
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+            margin-top: 1.5rem;
+        }
+    }
+
     &__detail {
         margin: 0 0 1.5rem 0;
         color: white;
         text-align: center;
         font-weight: 300;
         font-size: 10px;
+        font-size: 14px;
+        line-height: 20px;
     }
 }

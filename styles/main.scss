@@ -65,6 +65,14 @@ main {
             left: -48px;
             width: 300px;
         }
+
+        &--footer {
+            @include desktop {
+                top: -24px;
+                left: -60px;
+                width: 300px;
+            }
+        }
     }
 
     &__text {
@@ -246,21 +254,29 @@ main {
     &__logo-list {
         display: flex;
         flex-direction: column;
+        max-width: 1064px;
 
         @include tablet {
             flex-direction: row;
-            justify-content: space-evenly;
+            justify-content: space-between;
             align-items: center;
             margin-bottom: 2rem;
+            margin: 0 auto 2rem auto;
+            padding: 0 2rem;
         }
     }
 
     &__logo {
         margin: 1.5rem auto;
+        max-width: 200px;
 
         @include tablet {
             margin: 1.5rem 0;
         }
+    }
+
+    &__img {
+        max-width: 200px;
     }
 }
 
@@ -296,7 +312,8 @@ main {
         @include tablet {
             flex-direction: row;
             align-items: flex-start;
-            max-width: 1200px;
+            width: calc(100% - 64px);
+            max-width: 1064px;
         }
     }
 
@@ -520,6 +537,7 @@ main {
 
     &__img {
         border-radius: 4px;
+        width: 300px;
 
         @include desktop {
             width: 400px;
@@ -541,9 +559,14 @@ main {
 
         &--bottom {
             margin-top: 14px;
+            height: 225px;
+            object-fit: cover;
+            object-position: 0 -79px;
 
             @include desktop {
                 margin: 0 0 0 80px;
+                height: 285px;
+                object-position: 0 -109px;
             }
         }
     }
@@ -559,6 +582,13 @@ main {
     flex-direction: column;
     align-items: center;
 
+    &__main {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
     &__orientation {
         display: flex;
         flex-direction: column;
@@ -568,7 +598,7 @@ main {
             flex-direction: row;
             justify-content: space-between;
             width: 100%;
-            margin-bottom: 3rem;
+            align-items: flex-start;
         }
     }
 
@@ -584,7 +614,7 @@ main {
         }
 
         @include desktop {
-            margin: 3.5rem 0 1.5rem 0;
+            margin: 5.5rem 0 1.5rem 0;
             font-size: 14px;
             line-height: 20px;
             width: 530px;
@@ -597,6 +627,50 @@ main {
         width: 125px;
         justify-content: space-between;
         margin-bottom: 1.5rem;
+
+        @include desktop {
+            margin-top: 2.5rem;
+        }
+    }
+
+
+    &__creators {
+        align-self: flex-start;
+        color: white;
+        text-align: center;
+        margin: 1rem auto;
+
+        @include desktop {
+            text-align: left;
+            margin: 1rem 0;
+        }
+    }
+
+    &__credits {
+        font-weight: 300;
+        font-size: 12px;
+        margin: 0.2rem;
+
+        @include desktop {
+            font-size: 14px;
+            line-height: 20px;
+        }
+    }
+
+    &__credits-link {
+        font-weight: bold;
+        color: white;
+        font-size: 12px;
+        margin: 0;
+
+        @include desktop {
+            font-size: 14px;
+            line-height: 20px;
+        }
+
+        &:hover {
+            color: $main-color-2;
+        }
     }
 
     &__line {

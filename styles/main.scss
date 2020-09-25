@@ -18,6 +18,7 @@ main {
 // Hero
 .hero {
     background-image: url(../assets/images/guitar-hero.jpg);
+    background-color: rgba(black, 0.74);
     background-repeat: none;
     background-size: cover;
     height: 533px;
@@ -26,6 +27,12 @@ main {
     @include tablet {
         height: 100vh;
         background-position: 32% 0%;
+    }
+
+    &__SEO-identifier {
+        color: rgba(white, 0.0);
+        position: absolute;
+        margin: 0;
     }
 
     &__content {

@@ -85,6 +85,7 @@ main {
 
 .hero {
   background-image: url(../assets/images/guitar-hero.jpg);
+  background-color: rgba(0, 0, 0, 0.74);
   background-repeat: none;
   background-size: cover;
   height: 533px;
@@ -96,6 +97,12 @@ main {
     height: 100vh;
     background-position: 32% 0%;
   }
+}
+
+.hero__SEO-identifier {
+  color: rgba(255, 255, 255, 0);
+  position: absolute;
+  margin: 0;
 }
 
 .hero__content {

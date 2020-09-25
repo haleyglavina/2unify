@@ -273,14 +273,16 @@ main {
   height: 12px;
   width: 12px;
   position: absolute;
-  right: 16px;
+  right: 13px;
+  top: 6px;
 }
 
 @media (min-width: 1200px) {
   .hero__btn--promo::after {
     height: 20px;
     width: 20px;
-    right: 10px;
+    right: 9px;
+    top: 8px;
   }
 }
 
@@ -657,7 +659,13 @@ main {
 }
 
 .features__title {
-  margin-bottom: 32px;
+  margin: 2rem 0;
+}
+
+@media (min-width: 1200px) {
+  .features__title {
+    margin: 2rem 0 4rem 0;
+  }
 }
 
 @media (min-width: 1200px) {
@@ -678,8 +686,13 @@ main {
 }
 
 .hilights__title {
-  margin-top: 4rem;
   margin: 4rem 0 2rem 0;
+}
+
+@media (min-width: 1200px) {
+  .hilights__title {
+    margin: 4rem 0 4rem 0;
+  }
 }
 
 .hilights__topic {
@@ -693,11 +706,7 @@ main {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  margin: 5rem 0;
-}
-
-.hilights__topic--first {
-  margin-top: 2rem;
+  margin: 0 0 5rem 0;
 }
 
 @media (min-width: 1200px) {
@@ -709,10 +718,20 @@ main {
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
             flex-direction: row;
+    width: 100%;
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
     margin-bottom: 10rem;
+  }
+}
+
+@media (min-width: 1200px) {
+  .hilights__topic--reverse {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: row-reverse;
+            flex-direction: row-reverse;
   }
 }
 
@@ -722,13 +741,8 @@ main {
   }
 }
 
-.hilights__subtitle--top {
+.hilights__subtitle {
   margin-top: 0;
-}
-
-.hilights__subtitle:hover {
-  opacity: 0.6;
-  cursor: pointer;
 }
 
 @media (min-width: 1200px) {
@@ -766,24 +780,7 @@ main {
   }
 }
 
-@media (min-width: 1200px) {
-  .hilights__img--top {
-    margin-left: 80px;
-  }
-}
-
-.hilights__img--mid {
-  margin-top: 14px;
-}
-
-@media (min-width: 1200px) {
-  .hilights__img--mid {
-    margin: 0 80px 0 0;
-  }
-}
-
 .hilights__img--bottom {
-  margin-top: 14px;
   height: 225px;
   -o-object-fit: cover;
      object-fit: cover;
@@ -793,7 +790,6 @@ main {
 
 @media (min-width: 1200px) {
   .hilights__img--bottom {
-    margin: 0 0 0 80px;
     height: 285px;
     -o-object-position: 0 -109px;
        object-position: 0 -109px;

@@ -150,12 +150,15 @@ main {
                 height: 12px;
                 width: 12px;
                 position: absolute;
-                right: 16px;
+                right: 13px;
+                top: 6px;
+                
 
                 @include desktop {
                     height: 20px;
                     width: 20px;
-                    right: 10px;
+                    right: 9px;
+                    top: 8px;
                 }
             }
         }
@@ -458,7 +461,11 @@ main {
     align-self: center;
     max-width: $max-content-width;
     &__title {
-        margin-bottom: $medium-padding;
+        margin: 2rem 0;
+
+        @include desktop {
+            margin: 2rem 0 4rem 0;
+        }
     }
 
     @include desktop {
@@ -476,25 +483,31 @@ main {
     }
 
     &__title {
-        margin-top: 4rem;
         margin: 4rem 0 2rem 0;
+
+        @include desktop {
+            margin: 4rem 0 4rem 0;
+        }
     }
 
     &__topic {
         display: flex;
         flex-direction: column;
         align-items: center;
-        margin: 5rem 0;
-
-        &--first {
-            margin-top: 2rem;
-        }
+        margin: 0 0 5rem 0;
 
         @include desktop {
             display: flex;
             flex-direction: row;
+            width: 100%;
             justify-content: space-between;
             margin-bottom: 10rem;
+        }
+
+        &--reverse {
+            @include desktop {
+                flex-direction: row-reverse;
+            }
         }
     }
 
@@ -505,14 +518,7 @@ main {
     }
 
     &__subtitle {
-        &--top {
-            margin-top: 0;
-        }
-
-        &:hover {
-            opacity: 0.6;
-            cursor: pointer;
-        }
+        margin-top: 0;
 
         @include desktop {
             text-align: left;
@@ -543,28 +549,12 @@ main {
             width: 400px;
         }
 
-        &--top {
-            @include desktop {
-                margin-left: 80px;
-            }
-        }
-
-        &--mid {
-            margin-top: 14px;
-
-            @include desktop {
-                margin: 0 80px 0 0;
-            }
-        }
-
         &--bottom {
-            margin-top: 14px;
             height: 225px;
             object-fit: cover;
             object-position: 0 -79px;
 
             @include desktop {
-                margin: 0 0 0 80px;
                 height: 285px;
                 object-position: 0 -109px;
             }

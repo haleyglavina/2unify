@@ -33,10 +33,10 @@ const colouredHover = (iconElements, iconName) => {
         icon.addEventListener('mouseover', e => {
             e.target.src = `./assets/images/${iconName}-hover.svg`;});
         icon.addEventListener('mouseout', e => {
-            e.target.src = `./assets/images/${iconName}.svg`;});
+            e.target.src = `./assets/images/${iconName}-icon.svg`;});
     });
 }
 
-colouredHover(insta, 'instagram');
-colouredHover(fb, 'facebook');
-colouredHover(linkedin, 'linkedin');
+colouredHover(insta, 'ig');
+colouredHover(fb, 'face');
+colouredHover(linkedin, 'linked');
